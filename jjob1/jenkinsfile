@@ -1,11 +1,18 @@
 pipeline {
     agent any
-   
+ 
     stages {
-        stage("hello") {
-            steps {
-                echo "hello world"
-            }        
+        stage ("git checkout") {
+  	        steps {
+	            git branch: 'main', url: 'https://github.com/RaghavendraNaik-cloud/ci-cd-project.git'
+            }
         }
+    	
+  
+        stage ("build") {
+            steps {
+ 	            echo "hello build"
+	        }
+	    }
     }
 }
