@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: fullstack
-        image: replace
+        image: ragunaik/fullstack:replaceImageTag
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
